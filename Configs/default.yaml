@@ -3,6 +3,7 @@ seed: 0
 data:
   path: "data/waimai_10k.csv"
   batch_size: 8
+  vocabulary_size: 100
 
 model:
   name: "textcnn"
@@ -10,7 +11,7 @@ model:
   n_classes: 2
   n_filter: 2
   dropout: 0.2
-  filter_sizes : 2
+  filter_sizes : [2,3]
   embedding_dim : 100
 
   optimizer:

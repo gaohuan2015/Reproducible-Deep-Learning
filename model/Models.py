@@ -4,14 +4,14 @@ import torch.nn.functional as F
 
 
 class TextCNN(nn.Module):
-    def __init__(self, cfg, vocabulary_size):
+    def __init__(self, cfg):
         super(TextCNN, self).__init__()
         class_num = cfg.model.n_classes
         chanel_num = cfg.model.n_chanel
         filter_num = cfg.model.n_filter
         filter_sizes = cfg.model.filter_sizes
         embedding_dimension = cfg.model.embedding_dim
-        self.embedding = nn.Embedding(vocabulary_size, embedding_dimension)
+        self.embedding = nn.Embedding(cfg.data.vocabulary_size, embedding_dimension)
         self.convs = nn.ModuleList([nn.Conv2d(
             chanel_num, filter_num, (size, embedding_dimension)) for size in filter_sizes])
         self.dropout = nn.Dropout(cfg.model.dropout)
