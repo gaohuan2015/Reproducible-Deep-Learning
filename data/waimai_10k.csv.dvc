@@ -1,0 +1,4 @@
+outs:
+- md5: 433b59e6cf17d289a1836032243bd637
+  size: 931485
+  path: waimai_10k.csv
