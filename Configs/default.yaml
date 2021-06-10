@@ -1,7 +1,7 @@
 seed: 0
 
 data:
-  path: "data/ESC-50"
+  path: "data/waimai_10k.csv"
   sample_rate: 8000
   train_folds: [1,2,3]
   val_folds: [4]
